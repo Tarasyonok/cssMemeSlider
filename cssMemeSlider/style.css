@@ -1,3 +1,141 @@
-h1 {
-    color: blue;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --image-width: 80vw;
+    --image-height: 70vh;
+}
+
+
+body {
+    background-color: lemonchiffon;
+}
+
+input {
+    /* display: none; */
+}
+
+
+.slider {
+    margin: auto;
+    width: var(--image-width);
+    overflow-x: hidden;
+    /* display: flex; */
+}
+
+.images {
+    transition: margin-left 1s;
+    margin-left: -0em;
+    width: calc(var(--image-width) * 4);
+}
+
+.texts {
+
+    transition: margin-left 1s;
+    margin-left: -0em;
+    /* width: 30em; */
+    width: calc(var(--image-width) * 4);
+}
+
+.texts span {
+    display: inline-block;
+    width: var(--image-width);
+}
+
+img {
+    width: var(--image-width);
+    height: var(--image-height);
+    object-fit: cover;
+}
+
+#r1:checked~.images {
+    margin-left: calc(var(--image-width) * -0);
+}
+
+#r2:checked~.images {
+    margin-left: calc(var(--image-width) * -1);
+}
+
+#r3:checked~.images {
+    margin-left: calc(var(--image-width) * -2);
+}
+
+#r4:checked~.images {
+    margin-left: calc(var(--image-width) * -3);
+}
+
+#r1:checked~.texts {
+    margin-left: calc(var(--image-width) * -0);
+}
+
+#r2:checked~.texts {
+    margin-left: calc(var(--image-width) * -1);
+}
+
+#r3:checked~.texts {
+    margin-left: calc(var(--image-width) * -2);
+}
+
+#r4:checked~.texts {
+    margin-left: calc(var(--image-width) * -3);
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    border: 10px solid lemonchiffon;
+}
+
+label .castom {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+label .castom:hover {
+    background-color: red;
+}
+
+#r1:checked~.first-label .castom {
+    border: 3px solid blue;
+    background-color: lemonchiffon;
+}
+
+#r1:checked~.first-label .castom:hover {
+    border: 3px solid red;
+    background-color: lemonchiffon;
+}
+
+#r2:checked~.second-label .castom {
+    border: 3px solid blue;
+    background-color: lemonchiffon;
+}
+
+#r2:checked~.second-label .castom:hover {
+    border: 3px solid red;
+    background-color: lemonchiffon;
+}
+
+#r3:checked~.third-label .castom {
+    border: 3px solid blue;
+    background-color: lemonchiffon;
+}
+
+#r3:checked~.third-label .castom:hover {
+    border: 3px solid red;
+    background-color: lemonchiffon;
+}
+
+#r4:checked~.fourth-label .castom {
+    border: 3px solid blue;
+    background-color: lemonchiffon;
+}
+
+#r4:checked~.fourth-label .castom:hover {
+    border: 3px solid red;
+    background-color: lemonchiffon;
 }
