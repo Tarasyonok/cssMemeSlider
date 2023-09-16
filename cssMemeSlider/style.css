@@ -17,6 +17,10 @@ body {
     font-family: 'Chakra Petch', sans-serif;
 }
 
+h1 {
+    text-align: center;
+}
+
 input {
     display: none;
 }
@@ -267,9 +271,6 @@ label:active .castom {
         background-color: #FFBE73;
     }
 
-    h1 {
-        text-align: center;
-    }
 }
 
 @media (max-width: 20rem) {
