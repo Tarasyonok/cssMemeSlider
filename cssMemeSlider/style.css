@@ -13,6 +13,8 @@
 
 body {
     background-color: #FFBE73;
+    color: #020835;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 input {
@@ -42,19 +44,35 @@ img {
     background-color: #081472;
 }
 
-#r1:checked~.images {
+#dr1:checked~.images {
     margin-left: calc(var(--image-width) * -0);
 }
 
-#r2:checked~.images {
+#mr1:checked~.images {
+    margin-left: calc(var(--image-width) * -0);
+}
+
+#dr2:checked~.images {
     margin-left: calc(var(--image-width) * -1);
 }
 
-#r3:checked~.images {
+#mr2:checked~.images {
+    margin-left: calc(var(--image-width) * -1);
+}
+
+#dr3:checked~.images {
     margin-left: calc(var(--image-width) * -2);
 }
 
-#r4:checked~.images {
+#mr3:checked~.images {
+    margin-left: calc(var(--image-width) * -2);
+}
+
+#dr4:checked~.images {
+    margin-left: calc(var(--image-width) * -3);
+}
+
+#mr4:checked~.images {
     margin-left: calc(var(--image-width) * -3);
 }
 
@@ -66,7 +84,6 @@ img {
 
 .texts {
     font-size: 3em;
-    font-family: Arial, Helvetica, sans-serif;
     transition: margin-left 1s;
     margin-left: -0em;
     /* width: 30em; */
@@ -78,19 +95,35 @@ img {
     width: var(--text-width);
 }
 
-#r1:checked~.text-and-buttons .text-slider .texts {
+#dr1:checked~.text-and-buttons .text-slider .texts {
     margin-left: calc(var(--text-width) * -0);
 }
 
-#r2:checked~.text-and-buttons .text-slider .texts {
+#mr1:checked~.text-slider .texts {
+    margin-left: calc(var(--text-width) * -0);
+}
+
+#dr2:checked~.text-and-buttons .text-slider .texts {
     margin-left: calc(var(--text-width) * -1);
 }
 
-#r3:checked~.text-and-buttons .text-slider .texts {
+#mr2:checked~.text-slider .texts {
+    margin-left: calc(var(--text-width) * -1);
+}
+
+#dr3:checked~.text-and-buttons .text-slider .texts {
     margin-left: calc(var(--text-width) * -2);
 }
 
-#r4:checked~.text-and-buttons .text-slider .texts {
+#mr3:checked~.text-slider .texts {
+    margin-left: calc(var(--text-width) * -2);
+}
+
+#dr4:checked~.text-and-buttons .text-slider .texts {
+    margin-left: calc(var(--text-width) * -3);
+}
+
+#mr4:checked~.text-slider .texts {
     margin-left: calc(var(--text-width) * -3);
 }
 
@@ -119,49 +152,54 @@ label:active .castom {
     background-color: #007633;
 }
 
-#r1:checked~.text-and-buttons .labels .first-label .castom {
+#dr1:checked~.text-and-buttons .labels .first-label .castom {
     border: 3px solid #717DD7;
     background-color: #FFBE73;
 }
 
-#r1:checked~.text-and-buttons .labels .first-label:hover .castom {
+#dr1:checked~.text-and-buttons .labels .first-label:hover .castom {
     border: 3px solid #00B64F;
     background-color: #FFBE73;
 }
 
-#r2:checked~.text-and-buttons .labels .second-label .castom {
+#dr2:checked~.text-and-buttons .labels .second-label .castom {
     border: 3px solid #717DD7;
     background-color: #FFBE73;
 }
 
-#r2:checked~.text-and-buttons .labels .second-label:hover .castom {
+#dr2:checked~.text-and-buttons .labels .second-label:hover .castom {
     border: 3px solid #00B64F;
     background-color: #FFBE73;
 }
 
-#r3:checked~.text-and-buttons .labels .third-label .castom {
+#dr3:checked~.text-and-buttons .labels .third-label .castom {
     border: 3px solid #717DD7;
     background-color: #FFBE73;
 }
 
-#r3:checked~.text-and-buttons .labels .third-label:hover .castom {
+#dr3:checked~.text-and-buttons .labels .third-label:hover .castom {
     border: 3px solid #00B64F;
     background-color: #FFBE73;
 }
 
-#r4:checked~.text-and-buttons .labels .fourth-label .castom {
+#dr4:checked~.text-and-buttons .labels .fourth-label .castom {
     border: 3px solid #717DD7;
     background-color: #FFBE73;
 }
 
-#r4:checked~.text-and-buttons .labels .fourth-label:hover .castom {
+#dr4:checked~.text-and-buttons .labels .fourth-label:hover .castom {
     border: 3px solid #00B64F;
     background-color: #FFBE73;
 }
 
-.text-and-buttons {
+.desktop .text-and-buttons {
     display: flex;
     justify-content: space-between;
+}
+
+.mobile .labels {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -171,11 +209,60 @@ label:active .castom {
 
 
 @media (max-width: 768px) {
+    :root {
+        --image-width: 95vw;
+        --image-height: 70vh;
+        --text-width: 100vw
+    }
+
+
+
     .desktop {
         display: none;
     }
 
     .mobile {
         display: block;
+    }
+
+
+    #mr1:checked~.labels .first-label .castom {
+        border: 3px solid #717DD7;
+        background-color: #FFBE73;
+    }
+
+    #mr1:checked~.labels .first-label:hover .castom {
+        border: 3px solid #00B64F;
+        background-color: #FFBE73;
+    }
+
+    #mr2:checked~.labels .second-label .castom {
+        border: 3px solid #717DD7;
+        background-color: #FFBE73;
+    }
+
+    #mr2:checked~.labels .second-label:hover .castom {
+        border: 3px solid #00B64F;
+        background-color: #FFBE73;
+    }
+
+    #mr3:checked~.labels .third-label .castom {
+        border: 3px solid #717DD7;
+        background-color: #FFBE73;
+    }
+
+    #dr3:checked~.labels .third-label:hover .castom {
+        border: 3px solid #00B64F;
+        background-color: #FFBE73;
+    }
+
+    #mr4:checked~.labels .fourth-label .castom {
+        border: 3px solid #717DD7;
+        background-color: #FFBE73;
+    }
+
+    #mr4:checked~.labels .fourth-label:hover .castom {
+        border: 3px solid #00B64F;
+        background-color: #FFBE73;
     }
 }
