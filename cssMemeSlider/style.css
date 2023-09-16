@@ -12,7 +12,10 @@
 
 
 body {
-    background-color: #FFBE73;
+    /* background-color: rgba(0, 0, 0, 0); */
+    background: rgb(182, 97, 227);
+    background: linear-gradient(169deg, rgba(182, 97, 227, 1) 0%, rgba(205, 185, 64, 1) 44%, rgba(0, 212, 255, 1) 93%);
+    height: 100vh;
     color: #020835;
     font-family: 'Chakra Petch', sans-serif;
 }
@@ -37,6 +40,7 @@ input {
     transition: margin-left 1s;
     margin-left: -0rem;
     width: calc(var(--image-width) * 4);
+    
 }
 
 
@@ -45,7 +49,9 @@ img {
     height: var(--image-height);
     /* object-fit: cover; */
     object-fit: contain;
-    background-color: #081472;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    /* background: rgba(0, 0, 0, 0); */
 }
 
 #dr1:checked~.images {
@@ -139,62 +145,62 @@ img {
 label {
     display: inline-block;
     cursor: pointer;
-    border: 0.625rem solid #FFBE73;
+    border: 0.625rem solid rgba(0, 0, 0, 0);
 }
 
 label .castom {
     width: 1.5625rem;
     height: 1.5625rem;
     border-radius: 50%;
-    background-color: #717DD7;
+    background-color: #833ab4;
 }
 
 label:hover .castom {
-    background-color: #00B64F;
+    background-color: #fc6631;
 }
 
 label:active .castom {
-    background-color: #007633;
+    background-color: #fd1d1d;
 }
 
 #dr1:checked~.text-and-buttons .labels .first-label .castom {
-    border: 0.1875rem solid #717DD7;
-    background-color: #FFBE73;
+    border: 0.1875rem solid #833ab4;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #dr1:checked~.text-and-buttons .labels .first-label:hover .castom {
-    border: 0.1875rem solid #00B64F;
-    background-color: #FFBE73;
+    border: 0.1875rem solid #fc6631;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #dr2:checked~.text-and-buttons .labels .second-label .castom {
-    border: 0.1875rem solid #717DD7;
-    background-color: #FFBE73;
+    border: 0.1875rem solid #833ab4;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #dr2:checked~.text-and-buttons .labels .second-label:hover .castom {
-    border: 0.1875rem solid #00B64F;
-    background-color: #FFBE73;
+    border: 0.1875rem solid #fc6631;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #dr3:checked~.text-and-buttons .labels .third-label .castom {
-    border: 0.1875rem solid #717DD7;
-    background-color: #FFBE73;
+    border: 0.1875rem solid #833ab4;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #dr3:checked~.text-and-buttons .labels .third-label:hover .castom {
-    border: 0.1875rem solid #00B64F;
-    background-color: #FFBE73;
+    border: 0.1875rem solid #fc6631;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #dr4:checked~.text-and-buttons .labels .fourth-label .castom {
-    border: 0.1875rem solid #717DD7;
-    background-color: #FFBE73;
+    border: 0.1875rem solid #833ab4;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #dr4:checked~.text-and-buttons .labels .fourth-label:hover .castom {
-    border: 0.1875rem solid #00B64F;
-    background-color: #FFBE73;
+    border: 0.1875rem solid #fc6631;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .desktop .text-and-buttons {
@@ -232,43 +238,43 @@ label:active .castom {
 
 
     #mr1:checked~.labels .first-label .castom {
-        border: 0.1875rem solid #717DD7;
-        background-color: #FFBE73;
+        border: 0.1875rem solid #833ab4;
+        background-color: rgba(0, 0, 0, 0);
     }
 
     #mr1:checked~.labels .first-label:hover .castom {
-        border: 0.1875rem solid #00B64F;
-        background-color: #FFBE73;
+        border: 0.1875rem solid #fc6631;
+        background-color: rgba(0, 0, 0, 0);
     }
 
     #mr2:checked~.labels .second-label .castom {
-        border: 0.1875rem solid #717DD7;
-        background-color: #FFBE73;
+        border: 0.1875rem solid #833ab4;
+        background-color: rgba(0, 0, 0, 0);
     }
 
     #mr2:checked~.labels .second-label:hover .castom {
-        border: 0.1875rem solid #00B64F;
-        background-color: #FFBE73;
+        border: 0.1875rem solid #fc6631;
+        background-color: rgba(0, 0, 0, 0);
     }
 
     #mr3:checked~.labels .third-label .castom {
-        border: 0.1875rem solid #717DD7;
-        background-color: #FFBE73;
+        border: 0.1875rem solid #833ab4;
+        background-color: rgba(0, 0, 0, 0);
     }
 
     #dr3:checked~.labels .third-label:hover .castom {
-        border: 0.1875rem solid #00B64F;
-        background-color: #FFBE73;
+        border: 0.1875rem solid #fc6631;
+        background-color: rgba(0, 0, 0, 0);
     }
 
     #mr4:checked~.labels .fourth-label .castom {
-        border: 0.1875rem solid #717DD7;
-        background-color: #FFBE73;
+        border: 0.1875rem solid #833ab4;
+        background-color: rgba(0, 0, 0, 0);
     }
 
     #mr4:checked~.labels .fourth-label:hover .castom {
-        border: 0.1875rem solid #00B64F;
-        background-color: #FFBE73;
+        border: 0.1875rem solid #fc6631;
+        background-color: rgba(0, 0, 0, 0);
     }
 
 }
