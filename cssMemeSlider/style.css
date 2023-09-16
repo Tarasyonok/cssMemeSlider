@@ -31,7 +31,7 @@ input {
 
 .images {
     transition: margin-left 1s;
-    margin-left: -0em;
+    margin-left: -0rem;
     width: calc(var(--image-width) * 4);
 }
 
@@ -83,11 +83,12 @@ img {
 }
 
 .texts {
-    font-size: 3em;
+    font-size: 1.5rem;
     transition: margin-left 1s;
-    margin-left: -0em;
-    /* width: 30em; */
+    margin-left: -0rem;
+    /* width: 30rem; */
     width: calc(var(--text-width) * 4);
+    display: flex;
 }
 
 .texts span {
@@ -134,12 +135,12 @@ img {
 label {
     display: inline-block;
     cursor: pointer;
-    border: 10px solid #FFBE73;
+    border: 0.625rem solid #FFBE73;
 }
 
 label .castom {
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem;
+    height: 1.5625rem;
     border-radius: 50%;
     background-color: #717DD7;
 }
@@ -153,42 +154,42 @@ label:active .castom {
 }
 
 #dr1:checked~.text-and-buttons .labels .first-label .castom {
-    border: 3px solid #717DD7;
+    border: 0.1875rem solid #717DD7;
     background-color: #FFBE73;
 }
 
 #dr1:checked~.text-and-buttons .labels .first-label:hover .castom {
-    border: 3px solid #00B64F;
+    border: 0.1875rem solid #00B64F;
     background-color: #FFBE73;
 }
 
 #dr2:checked~.text-and-buttons .labels .second-label .castom {
-    border: 3px solid #717DD7;
+    border: 0.1875rem solid #717DD7;
     background-color: #FFBE73;
 }
 
 #dr2:checked~.text-and-buttons .labels .second-label:hover .castom {
-    border: 3px solid #00B64F;
+    border: 0.1875rem solid #00B64F;
     background-color: #FFBE73;
 }
 
 #dr3:checked~.text-and-buttons .labels .third-label .castom {
-    border: 3px solid #717DD7;
+    border: 0.1875rem solid #717DD7;
     background-color: #FFBE73;
 }
 
 #dr3:checked~.text-and-buttons .labels .third-label:hover .castom {
-    border: 3px solid #00B64F;
+    border: 0.1875rem solid #00B64F;
     background-color: #FFBE73;
 }
 
 #dr4:checked~.text-and-buttons .labels .fourth-label .castom {
-    border: 3px solid #717DD7;
+    border: 0.1875rem solid #717DD7;
     background-color: #FFBE73;
 }
 
 #dr4:checked~.text-and-buttons .labels .fourth-label:hover .castom {
-    border: 3px solid #00B64F;
+    border: 0.1875rem solid #00B64F;
     background-color: #FFBE73;
 }
 
@@ -208,11 +209,11 @@ label:active .castom {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     :root {
         --image-width: 95vw;
         --image-height: 70vh;
-        --text-width: 100vw
+        --text-width: 95vw
     }
 
 
@@ -227,42 +228,52 @@ label:active .castom {
 
 
     #mr1:checked~.labels .first-label .castom {
-        border: 3px solid #717DD7;
+        border: 0.1875rem solid #717DD7;
         background-color: #FFBE73;
     }
 
     #mr1:checked~.labels .first-label:hover .castom {
-        border: 3px solid #00B64F;
+        border: 0.1875rem solid #00B64F;
         background-color: #FFBE73;
     }
 
     #mr2:checked~.labels .second-label .castom {
-        border: 3px solid #717DD7;
+        border: 0.1875rem solid #717DD7;
         background-color: #FFBE73;
     }
 
     #mr2:checked~.labels .second-label:hover .castom {
-        border: 3px solid #00B64F;
+        border: 0.1875rem solid #00B64F;
         background-color: #FFBE73;
     }
 
     #mr3:checked~.labels .third-label .castom {
-        border: 3px solid #717DD7;
+        border: 0.1875rem solid #717DD7;
         background-color: #FFBE73;
     }
 
     #dr3:checked~.labels .third-label:hover .castom {
-        border: 3px solid #00B64F;
+        border: 0.1875rem solid #00B64F;
         background-color: #FFBE73;
     }
 
     #mr4:checked~.labels .fourth-label .castom {
-        border: 3px solid #717DD7;
+        border: 0.1875rem solid #717DD7;
         background-color: #FFBE73;
     }
 
     #mr4:checked~.labels .fourth-label:hover .castom {
-        border: 3px solid #00B64F;
+        border: 0.1875rem solid #00B64F;
         background-color: #FFBE73;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 20rem) {
+    .texts {
+        font-size: 1.1rem;
     }
 }
