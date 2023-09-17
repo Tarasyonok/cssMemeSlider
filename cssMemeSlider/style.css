@@ -15,7 +15,7 @@ body {
     /* background-color: rgba(0, 0, 0, 0); */
     background: rgb(182, 97, 227);
     background: linear-gradient(169deg, rgba(182, 97, 227, 1) 0%, rgba(205, 185, 64, 1) 44%, rgba(0, 212, 255, 1) 93%);
-    height: 100vh;
+    min-height: 100vh;
     color: #020835;
     font-family: 'Chakra Petch', sans-serif;
 }
