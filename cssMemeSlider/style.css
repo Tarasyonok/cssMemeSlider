@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --image-width: 80vw;
+    --image-height: 70vh;
+    --text-width: 50vw
+}
+
+
+body {
+    /* background-color: rgba(0, 0, 0, 0); */
+    background: rgb(182, 97, 227);
+    background: linear-gradient(169deg, rgba(182, 97, 227, 1) 0%, rgba(205, 185, 64, 1) 44%, rgba(0, 212, 255, 1) 93%);
+    min-height: 100vh;
+    color: #020835;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    display: none;
+}
+
+
+.image-slider {
+    margin: auto;
+    width: var(--image-width);
+    overflow-x: hidden;
+    /* display: flex; */
+}
+
+.images {
+    transition: margin-left 1s;
+    margin-left: -0rem;
+    width: calc(var(--image-width) * 4);
+    
+}
+
+
+img {
+    width: var(--image-width);
+    height: var(--image-height);
+    /* object-fit: cover; */
+    object-fit: contain;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    /* background: rgba(0, 0, 0, 0); */
+}
+
+#dr1:checked~.images {
+    margin-left: calc(var(--image-width) * -0);
+}
+
+#mr1:checked~.images {
+    margin-left: calc(var(--image-width) * -0);
+}
+
+#dr2:checked~.images {
+    margin-left: calc(var(--image-width) * -1);
+}
+
+#mr2:checked~.images {
+    margin-left: calc(var(--image-width) * -1);
+}
+
+#dr3:checked~.images {
+    margin-left: calc(var(--image-width) * -2);
+}
+
+#mr3:checked~.images {
+    margin-left: calc(var(--image-width) * -2);
+}
+
+#dr4:checked~.images {
+    margin-left: calc(var(--image-width) * -3);
+}
+
+#mr4:checked~.images {
+    margin-left: calc(var(--image-width) * -3);
+}
+
+.text-slider {
+    width: var(--text-width);
+    overflow-x: hidden;
+    display: inline-block;
+}
+
+.texts {
+    font-size: 1.5rem;
+    transition: margin-left 1s;
+    margin-left: -0rem;
+    /* width: 30rem; */
+    width: calc(var(--text-width) * 4);
+    display: flex;
+}
+
+.texts span {
+    display: inline-block;
+    width: var(--text-width);
+}
+
+#dr1:checked~.text-and-buttons .text-slider .texts {
+    margin-left: calc(var(--text-width) * -0);
+}
+
+#mr1:checked~.text-slider .texts {
+    margin-left: calc(var(--text-width) * -0);
+}
+
+#dr2:checked~.text-and-buttons .text-slider .texts {
+    margin-left: calc(var(--text-width) * -1);
+}
+
+#mr2:checked~.text-slider .texts {
+    margin-left: calc(var(--text-width) * -1);
+}
+
+#dr3:checked~.text-and-buttons .text-slider .texts {
+    margin-left: calc(var(--text-width) * -2);
+}
+
+#mr3:checked~.text-slider .texts {
+    margin-left: calc(var(--text-width) * -2);
+}
+
+#dr4:checked~.text-and-buttons .text-slider .texts {
+    margin-left: calc(var(--text-width) * -3);
+}
+
+#mr4:checked~.text-slider .texts {
+    margin-left: calc(var(--text-width) * -3);
+}
+
+.labels {
+    display: inline-block;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    border: 0.625rem solid rgba(0, 0, 0, 0);
+}
+
+label .castom {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    border-radius: 50%;
+    background-color: #833ab4;
+}
+
+label:hover .castom {
+    background-color: #fc6631;
+}
+
+label:active .castom {
+    background-color: #fd1d1d;
+}
+
+#dr1:checked~.text-and-buttons .labels .first-label .castom {
+    border: 0.1875rem solid #833ab4;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#dr1:checked~.text-and-buttons .labels .first-label:hover .castom {
+    border: 0.1875rem solid #fc6631;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#dr2:checked~.text-and-buttons .labels .second-label .castom {
+    border: 0.1875rem solid #833ab4;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#dr2:checked~.text-and-buttons .labels .second-label:hover .castom {
+    border: 0.1875rem solid #fc6631;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#dr3:checked~.text-and-buttons .labels .third-label .castom {
+    border: 0.1875rem solid #833ab4;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#dr3:checked~.text-and-buttons .labels .third-label:hover .castom {
+    border: 0.1875rem solid #fc6631;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#dr4:checked~.text-and-buttons .labels .fourth-label .castom {
+    border: 0.1875rem solid #833ab4;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#dr4:checked~.text-and-buttons .labels .fourth-label:hover .castom {
+    border: 0.1875rem solid #fc6631;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.desktop .text-and-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile .labels {
+    display: flex;
+    justify-content: center;
+}
+
+
+.mobile {
+    display: none;
+}
+
+
+@media (max-width: 48rem) {
+    :root {
+        --image-width: 95vw;
+        --image-height: 70vh;
+        --text-width: 95vw
+    }
+
+
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+
+    #mr1:checked~.labels .first-label .castom {
+        border: 0.1875rem solid #833ab4;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #mr1:checked~.labels .first-label:hover .castom {
+        border: 0.1875rem solid #fc6631;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #mr2:checked~.labels .second-label .castom {
+        border: 0.1875rem solid #833ab4;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #mr2:checked~.labels .second-label:hover .castom {
+        border: 0.1875rem solid #fc6631;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #mr3:checked~.labels .third-label .castom {
+        border: 0.1875rem solid #833ab4;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #dr3:checked~.labels .third-label:hover .castom {
+        border: 0.1875rem solid #fc6631;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #mr4:checked~.labels .fourth-label .castom {
+        border: 0.1875rem solid #833ab4;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #mr4:checked~.labels .fourth-label:hover .castom {
+        border: 0.1875rem solid #fc6631;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+}
+
+@media (max-width: 20rem) {
+    .texts {
+        font-size: 1.1rem;
+    }
+}
